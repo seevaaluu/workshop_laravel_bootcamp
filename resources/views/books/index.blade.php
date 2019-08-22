@@ -26,7 +26,7 @@
                         @if($book->id != 1)
                             <tr>    
                                 <td>{{ $book->id }}</td>
-                                <td>@{{ $book->nombre }}</td>
+                                <td>{{ $book->nombre }}</td>
                                 <td>{{ $book->descripcion }}</td>
                             <tr>
                         @endif
