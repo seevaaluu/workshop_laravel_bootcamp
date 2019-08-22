@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Books;
 
-class BooksController extends Controller
+class AuthorsControllers extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +13,7 @@ class BooksController extends Controller
      */
     public function index()
     {
-        $books = Books::all();
-
-        return view('books.index')
-            ->with('books', $books);
+        return view("authors.index");
     }
 
     /**
@@ -38,12 +34,7 @@ class BooksController extends Controller
      */
     public function store(Request $request)
     {
-        $books = new Books;
-        $books->nombre = $request->nombre;
-        $books->descripcion = $request->descripcion;
-        $books->save();
-
-        return "Se ha guardado correctamente";
+        //
     }
 
     /**
@@ -54,9 +45,7 @@ class BooksController extends Controller
      */
     public function show($id)
     {
-        $book = Books::findOrfail($id);
-
-        return view('books.index');
+        //
     }
 
     /**
@@ -79,12 +68,7 @@ class BooksController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $book = Books::findOrFail($id);
-        $book->nombre = $request->nombre;
-        $book->descripcion = $request->descripcion;
-        $book->save();
-
-        return $book;
+        //
     }
 
     /**
@@ -95,11 +79,6 @@ class BooksController extends Controller
      */
     public function destroy($id)
     {
-        $book = Books::find($id);
-        $book->delete();
-
-        return [
-            "message" => "El recurso ha sido borrado"
-        ];
+        //
     }
 }

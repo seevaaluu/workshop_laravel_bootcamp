@@ -13,6 +13,7 @@
 
 Route::get('/', 'IndexController@Index');
 
+Route::get('/authors', 'AuthorsControllers@index');
+
 Route::get('/books', 'BooksController@index');
-Route::post('/books', 'BooksController@store');
 

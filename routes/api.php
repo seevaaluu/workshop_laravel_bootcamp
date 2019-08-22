@@ -13,5 +13,13 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/books', 'BooksController@index');
-Route::post('/books', 'BooksController@store');
+// Route::get('/books', 'BooksController@index');
+// Route::post('/books', 'BooksController@store');
+// Route::get('/books/{book_id}', 'BooksController@show');
+// Route::put('/books/{book_id}', 'BooksController@update');
+// Route::delete('/books/{book_id}', 'BooksController@destroy');
+
+// Route::resource('books', 'BooksController',['except' => ['index', 'show', 'update']]);
+
+
+
