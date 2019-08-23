@@ -15,5 +15,5 @@ Route::get('/', 'IndexController@Index');
 
 Route::get('/authors', 'AuthorsControllers@index');
 
-Route::resource('/books', 'BooksController');
+Route::get('/books', 'BooksController@index')->name('books.index');
 

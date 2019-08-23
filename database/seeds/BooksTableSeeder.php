@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Books;
+use Faker\Factory as Faker;
 
 class BooksTableSeeder extends Seeder
 {
@@ -12,14 +13,13 @@ class BooksTableSeeder extends Seeder
      */
     public function run()
     {
-        Books::create([
-            'nombre' => 'Algebra de Baldor',
-            'descripcion' => 'Es un libro...'
-        ]);
-
-        Books::create([
-            'nombre' => 'Inferno',
-            'descripcion' => 'Es un libro...'
-        ]);
+        $faker = Faker::create();
+        for ($i=0; $i <10 ; $i++) { 
+            Books::create([
+                'nombre' => $faker->text(15),
+                'descripcion' => $faker->text(20),
+                'autor_id' => 1
+            ]);
+        }
     }
 }

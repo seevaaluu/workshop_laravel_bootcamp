@@ -14,8 +14,9 @@ class AddForeignKeyToBooksTable extends Migration
     public function up()
     {
         Schema::table('books', function (Blueprint $table) {
-            $table->integer('autor_id')->unique()->nullable();
-            $table->foreign('autor_id')->references('id')->on('authors');
+            $table->bigInteger('autor_id')->unsigned()->nullable();
+            $table->foreign('autor_id')->references('id')->on('authors')->unsigned();
+            $table->engine = "innoDb";
         });
     }
 

@@ -8,6 +8,6 @@ class IndexController extends Controller
 {
     public function Index() 
     {
-        return "Estamos en index";
+        return view('layouts.dashboard');
     }
 }
