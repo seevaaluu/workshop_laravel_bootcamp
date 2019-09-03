@@ -1,0 +1,5 @@
+1- npm install
+2.-install vuetify@1.5.8
+2.-install axios
+2.-install sweetAlert
+2.-install alertifyjs

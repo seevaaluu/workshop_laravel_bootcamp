@@ -55,7 +55,7 @@ class BooksController extends Controller
     public function show($id)
     {
         $book = Books::findOrfail($id);
-
+        return $book;
         return view('books.index');
     }
 

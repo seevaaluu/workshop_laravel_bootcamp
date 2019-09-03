@@ -27,11 +27,13 @@
                         </table>
                         {{ $books->links() }}
                     </div>
-                <div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<example-component></example-component>
 
 
 @endsection
